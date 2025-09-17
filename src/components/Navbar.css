@@ -1,0 +1,21 @@
+.custom-navbar {
+  background: #000;
+  padding: 1rem 2rem;
+}
+
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: #fff !important;
+}
+
+.menu .nav-link {
+  color: #fff !important;
+  font-family: "Poppins", sans-serif;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.menu .nav-link:hover {
+  color: #ff6a00 !important;
+}

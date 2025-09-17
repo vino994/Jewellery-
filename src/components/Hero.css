@@ -1,0 +1,121 @@
+.hero-section {
+  background: #3e2723; /* deep brown background */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Left text */
+.hero-text {
+  padding: 4rem 2rem;
+  z-index: 2;
+}
+.hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
+}
+.hero-text h1 span {
+  color: #ff6a00;
+}
+.hero-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #bbb;
+}
+.hero-text h2 span {
+  color: #ff6a00;
+  font-weight: 700;
+}
+.hero-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  color: #ddd;
+}
+.hero-btn {
+  border: 2px solid #ff6a00;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: #ff6a00;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.hero-btn:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+/* Right Image Section */
+.hero-img-col {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.hero-img-wrapper {
+  position: relative;
+  height: 100%;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🔥 Blind-mode overlay (dark gradient fade) */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(10, 10, 10, 0.9) 0%,   /* near solid dark */
+    rgba(10, 10, 10, 0.6) 30%, /* fade blend */
+    rgba(10, 10, 10, 0) 100%   /* fully transparent */
+  );
+}
+
+
+
+.shop-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.shop-btn:hover {
+  color: #ff6a00;
+}
+.hero-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1rem 0;
+}
+
+.shop-btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #000;
+}
+.shop-btn:hover {
+  color: #ff6a00;
+}
