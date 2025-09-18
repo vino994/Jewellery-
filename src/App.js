@@ -13,13 +13,12 @@ function App() {
   return (
     <div>
       <CustomNavbar />
-      <Hero />
-      <Products />
-      <FestivalBridalSection />
-      <PromoSection />
-      <NewArrivalSection />
-      {/* Future sections here: Lookbook, Blog, Shop, etc. */}
-      <Footer />
+      <section id="home"><Hero /></section>
+      <section id="products"><Products /></section>
+      <section id="festival"><FestivalBridalSection /></section>
+      <section id="promo"><PromoSection /></section>
+      <section id="new-arrival"><NewArrivalSection /></section>
+      <section id="contact"><Footer /></section>
     </div>
   );
 }
