@@ -1,6 +1,7 @@
 .custom-navbar {
-  background: #000;
+  background: transparent !important; /* ✅ transparent over hero */
   padding: 1rem 2rem;
+  z-index: 10;
 }
 
 .brand {
@@ -17,5 +18,5 @@
 }
 
 .menu .nav-link:hover {
-  color: #ff6a00 !important;
+  color: #ff9800 !important; /* gold hover */
 }

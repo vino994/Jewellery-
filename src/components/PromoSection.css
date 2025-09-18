@@ -1,0 +1,103 @@
+.promo-section {
+  background: #111;
+  color: #fff;
+  padding: 4rem 2rem;
+}
+
+/* Top Promo Offers */
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+.promo-banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.promo-banner:hover img {
+  transform: scale(1.05);
+}
+.promo-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #000;
+  font-family: "Playfair Display", serif;
+}
+
+/* Features */
+.features-row i {
+  font-size: 2rem;
+  color: #ff9800;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.features-row h6 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.features-row p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Diamond Section */
+.diamond-section {
+  margin-top: 4rem;
+}
+.diamond-section h2 {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.diamond-section .highlight {
+  color: #ff9800;
+}
+.diamond-section p {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.diamond-section .talk-btn {
+  background: linear-gradient(90deg, #ff9800, #d17b00);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.diamond-img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 152, 0, 0.3);
+}
+.collection-modal {
+  background: #2e1c19;
+  color: #fff;
+  border-radius: 12px;
+  border: 2px solid #ffd27f;
+}
+
+.collection-modal .modal-title {
+  color: #ffd27f;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+.collection-img {
+  border-radius: 10px;
+  border: 2px solid #ffd27f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.collection-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 127, 0.5);
+}

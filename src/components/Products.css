@@ -1,0 +1,321 @@
+/* Force Bootstrap modal to use dark theme */
+.custom-modal.modal-content,
+.custom-modal .modal-content {
+  background-color: #2e1c19 !important;  /* ✅ force background */
+  color: #fff !important;                /* ✅ force text color */
+  border: 2px solid #ffd27f !important;  /* ✅ gold border */
+  border-radius: 16px !important;
+  box-shadow: 0 0 30px rgba(255, 215, 127, 0.3) !important;
+}
+.view-btn {
+  margin: 0.8rem auto 0;
+  display: block;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 6px 16px;
+}
+.view-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.products-section {
+  background: #2e1c19; /* deep brown */
+  color: #fff;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================================
+   Fade-in animation
+================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   Section Header
+================================ */
+.section-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section-header p {
+  color: #ccc;
+  font-family: "Poppins", sans-serif;
+  max-width: 700px;
+  margin: auto;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* ================================
+   Product Cards
+================================ */
+.product-card {
+  background: #3a2520;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(255, 152, 0, 0.4);
+}
+
+/* Image full width + height */
+.product-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* Info Section */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0.8rem 0 0.3rem;
+  text-align: center;
+  color: #ffd27f;
+}
+
+.product-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 6px;
+}
+
+/* ================================
+   Product Badges
+================================ */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  z-index: 2;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.product-badge.new {
+  background: linear-gradient(90deg, #ffd700, #ffb400);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+}
+
+.product-badge.sale {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  box-shadow: 0 0 12px rgba(255, 65, 108, 0.7);
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+/* ================================
+   Filter Buttons
+================================ */
+.filter-buttons .btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 0.4rem 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn:hover {
+  transform: scale(1.05);
+}
+
+/* ================================
+   Modal (Luxury Style Override)
+================================ */
+.custom-modal .modal-content {
+  --bs-modal-bg: #2e1c19;   /* ✅ force dark background */
+  background: #2e1c19;
+  color: #fff;
+  border-radius: 16px;
+  border: 2px solid #ffd27f;
+  box-shadow: 0 0 30px rgba(255, 215, 127, 0.3);
+  padding: 1.5rem;
+}
+
+/* Header */
+.custom-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 215, 127, 0.25);
+  padding-bottom: 1rem;
+}
+
+.custom-modal .modal-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd27f;
+  text-shadow: 0 0 8px rgba(255, 215, 127, 0.6);
+}
+
+/* Close button */
+.custom-modal .btn-close {
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+  transition: transform 0.2s ease;
+}
+.custom-modal .btn-close:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+/* Main Product Image */
+.modal-main-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 2px solid #ffd27f;
+  box-shadow: 0 0 20px rgba(255, 215, 127, 0.2);
+  margin-bottom: 1.2rem;
+}
+
+/* Price */
+.modal-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #ffd27f;
+}
+.modal-price .old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  margin-right: 8px;
+}
+
+/* Description & Details */
+.modal-description {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #eee;
+}
+.modal-details {
+  font-size: 0.95rem;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Let's Talk Button */
+.talk-btn {
+  background: linear-gradient(90deg, #ff9800, #d17b00);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+.talk-btn:hover {
+  background: linear-gradient(90deg, #ffd27f, #ff9800);
+  color: #2e1c19;
+  box-shadow: 0 0 20px rgba(255, 215, 127, 0.6);
+}
+
+/* Social Icons */
+.social-icons a {
+  font-size: 1.6rem;
+  color: #ffd27f;
+  margin-right: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #ff9800;
+  transform: scale(1.25);
+}
+
+/* ================================
+   Masonry Gallery
+================================ */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 12px;
+  margin-top: 1rem;
+}
+.masonry-gallery img {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+.masonry-gallery img.active {
+  border: 2px solid #ffd27f;
+  box-shadow: 0 0 14px rgba(255, 215, 127, 0.7);
+}
+.masonry-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Related Products */
+.related-products h6 {
+  color: #ffd27f;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.related-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.related-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 215, 127, 0.4);
+}
+
+/* Responsive Masonry */
+@media (max-width: 768px) {
+  .masonry-gallery { column-count: 2; }
+}
+@media (max-width: 480px) {
+  .masonry-gallery { column-count: 1; }
+}

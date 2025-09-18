@@ -1,34 +1,65 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { GiDiamondRing, GiCutDiamond, GiCrown } from "react-icons/gi"; 
 import "./Hero.css";
 
 function Hero() {
+  // Generate random sparkle positions once per load
+  const sparkles = useMemo(() => {
+    return Array.from({ length: 20 }).map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      delay: `${Math.random() * 3}s`,
+    }));
+  }, []);
+
   return (
-    <section className="hero-section">
-      <Container fluid className="h-100">
-        <Row className="align-items-center h-100">
-          {/* Left Side - Text */}
+    <section
+      id="home"
+      className="hero-section"
+      style={{
+        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/j23.png)`,
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="overlay"></div>
+
+      {/* Sparkle Layer ✨ */}
+      <div className="sparkle-layer">
+        {sparkles.map((sparkle, i) => (
+          <span
+            key={i}
+            className="sparkle"
+            style={{
+              top: sparkle.top,
+              left: sparkle.left,
+              animationDelay: sparkle.delay,
+            }}
+          ></span>
+        ))}
+      </div>
+
+      {/* Floating Jewellery Icons 💍 */}
+      <div className="floating-icon icon1"><GiDiamondRing /></div>
+<div className="floating-icon icon2"><GiCutDiamond /></div>
+<div className="floating-icon icon3"><GiCrown /></div>
+<div className="floating-icon icon4"><GiCutDiamond /></div>
+
+      <Container className="h-100 d-flex align-items-center">
+        <Row className="w-100">
+          {/* Left Text */}
           <Col md={6} className="hero-text">
             <h1>
-              Shine <span>& sparkle</span>
+              Shine <span>& Sparkle</span>
             </h1>
             <h2>
               CLEARANCE <span>Sale</span>
             </h2>
-            <p>Get an extra 10% off featured jewellery</p>
-            <Button className="hero-btn">See all collections</Button>
-          </Col>
-
-          {/* Right Side - Full Height Image with Overlay */}
-          <Col md={6} className="hero-img-col p-0">
-            <div className="hero-img-wrapper">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/j23.png`}
-                alt="Jewellery Model"
-                className="hero-img"
-              />
-              <div className="img-overlay"></div>
-            </div>
+            <p>
+              Discover timeless elegance crafted for you.  
+              Enjoy an extra <strong>10% off</strong> on featured jewellery.
+            </p>
+            <Button className="hero-btn">✨ See all collections</Button>
           </Col>
         </Row>
       </Container>
