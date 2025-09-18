@@ -5,117 +5,319 @@ import {
   FaPhoneAlt,
   FaFacebook,
   FaInstagram,
-  FaTwitter,
+  
 } from "react-icons/fa";
 import "./Products.css";
 
 function Products() {
   const productData = [
+    // ===== Bracelet =====
     {
       id: 1,
-      img: "/assets/j1.jpg",
+      img: "/assets/bracelet6.jpg",
       title: "Kada Bracelet",
       tag: "NEW",
       category: "bracelet",
       description:
         "Traditional kada-style bracelet crafted with intricate Indian motifs, perfect for festive and wedding wear.",
       details:
-        "Made with high-quality silver and antique finish. This kada bracelet is ideal for traditional functions, weddings, and festive occasions. Its intricate design represents the cultural heritage of India.",
-      gallery: ["/assets/j1.jpg", "/assets/j5.jpg", "/assets/j6.jpg"],
+        "Made with high-quality silver and antique finish. Ideal for weddings and festive occasions.",
+      gallery: [
+        "/assets/silver5.webp",
+        "/assets/silver6.jpeg",
+        "/assets/silver4.jpeg",
+        "/assets/silver1.jpeg",
+        "/assets/silver2.webp",
+        "/assets/silver3.webp",
+        "/assets/bracelet.webp",
+        "/assets/bracelet4.avif",
+        "/assets/bracelet5.webp",
+        "/assets/bracelet1.webp",
+        "/assets/bracelet3.webp",
+      ],
     },
     {
       id: 2,
-      img: "/assets/j2.jpg",
-      title: "Silver Temple Ring",
-      tag: "SALE",
-      category: "ring",
-      description:
-        "Handcrafted silver ring inspired by temple architecture, bringing timeless heritage into daily wear.",
-      details:
-        "Crafted in 92.5 sterling silver with temple-inspired carvings. A meaningful accessory that reflects divine artistry and blends tradition with style.",
-      gallery: ["/assets/j2.jpg", "/assets/j3.jpg", "/assets/j4.jpg"],
-    },
-    {
-      id: 3,
-      img: "/assets/j3.jpg",
-      title: "Navaratna Ring",
-      tag: "SALE",
-      category: "ring",
-      description:
-        "Auspicious Navaratna ring set with nine gemstones, symbolizing prosperity and harmony in Indian tradition.",
-      details:
-        "The Navaratna ring is crafted in sterling silver with nine authentic gemstones. Believed to bring good luck, balance, and harmony as per Vedic astrology.",
-      gallery: ["/assets/j3.jpg", "/assets/j2.jpg", "/assets/j4.jpg"],
-    },
-    {
-      id: 4,
-      img: "/assets/j4.jpg",
-      title: "Gold Plated Statement Ring",
-      tag: "SALE",
-      category: "ring",
-      description:
-        "Bold gold plated statement ring with meenakari detailing, perfect for weddings and grand occasions.",
-      details:
-        "Designed for those who love grandeur, this ring features meenakari artistry with premium gold plating. A perfect choice for bridal jewellery collections.",
-      gallery: ["/assets/j4.jpg", "/assets/j2.jpg", "/assets/j3.jpg"],
-    },
-    {
-      id: 5,
-      img: "/assets/j5.jpg",
+      img: "/assets/silver5.webp",
       title: "Silver Kada",
       tag: "NEW",
       category: "bracelet",
       description:
         "Classic silver kada bracelet with a sleek finish, ideal for daily wear or gifting.",
       details:
-        "This kada is made from 92.5 silver with a modern touch. Lightweight yet durable, making it ideal for daily use as well as a thoughtful gift.",
-      gallery: ["/assets/j5.jpg", "/assets/j1.jpg", "/assets/j6.jpg"],
+        "Crafted with 92.5 silver, lightweight yet durable for daily use or as a thoughtful gift.",
+      gallery: [
+        "/assets/silver5.webp",
+        "/assets/silver6.jpeg",
+        "/assets/silver4.jpeg",
+        "/assets/silver1.jpeg",
+        "/assets/silver2.webp",
+        "/assets/silver3.webp",
+        "/assets/bracelet.webp",
+        "/assets/bracelet4.avif",
+        "/assets/bracelet5.webp",
+        "/assets/bracelet1.webp",
+        "/assets/bracelet3.webp",
+      ],
+    },
+
+    // ===== Ring =====
+    {
+      id: 3,
+      img: "/assets/j1.jpg",
+      title: "Silver Temple Ring",
+      tag: "SALE",
+      category: "ring",
+      description:
+        "Handcrafted silver ring inspired by temple architecture, bringing timeless heritage into daily wear.",
+      details:
+        "Made in 92.5 sterling silver with divine carvings inspired by South Indian temples.",
+      gallery: [
+        "/assets/j4.jpg",
+        "/assets/j2.jpg",
+        "/assets/j3.jpg",
+        "/assets/j5.jpg",
+        "/assets/j6.jpg",
+        "/assets/j7.jpg",
+        "/assets/j9.jpg",
+        "/assets/j10.jpg",
+        "/assets/j11.jpg",
+      ],
     },
     {
+      id: 4,
+      img: "/assets/r1.webp",
+      title: "Navaratna Ring",
+      tag: "SALE",
+      category: "ring",
+      description:
+        "Auspicious Navaratna ring set with nine gemstones, symbolizing prosperity and harmony.",
+      details:
+        "Designed as per Vedic traditions with authentic gemstones representing the nine planets.",
+      gallery: [
+        "/assets/j4.jpg",
+        "/assets/j2.jpg",
+        "/assets/j3.jpg",
+        "/assets/j5.jpg",
+        "/assets/j6.jpg",
+        "/assets/j7.jpg",
+        "/assets/j9.jpg",
+        "/assets/j10.jpg",
+        "/assets/j11.jpg",
+        "/assets/j12.jpg",
+        "/assets/j38.jpeg",
+        "/assets/j37.jpeg",
+        "/assets/j34.jpeg",
+      ],
+    },
+    {
+      id: 5,
+      img: "/assets/j4.jpg",
+      title: "Gold Plated Statement Ring",
+      tag: "SALE",
+      category: "ring",
+      description:
+        "Bold gold plated statement ring with meenakari detailing, perfect for weddings.",
+      details:
+        "Premium quality, grand meenakari detailing, a favorite for bridal collections.",
+      gallery: [
+        "/assets/j4.jpg",
+        "/assets/j2.jpg",
+        "/assets/j3.jpg",
+        "/assets/j5.jpg",
+        "/assets/j6.jpg",
+        "/assets/j7.jpg",
+        "/assets/j9.jpg",
+        "/assets/j10.jpg",
+        "/assets/j11.jpg",
+        "/assets/j12.jpg",
+        "/assets/j38.jpeg",
+        "/assets/j37.jpeg",
+        "/assets/j34.jpeg",
+      ],
+    },
+
+    // ===== Necklace =====
+    {
       id: 6,
-      img: "/assets/j6.jpg",
+      img: "/assets/j44.jpeg",
       title: "Handmade Temple Necklace",
       tag: "SALE",
       category: "necklace",
       description:
         "Exquisite temple-style necklace with antique gold polish, a timeless piece for traditional attire.",
       details:
-        "A masterpiece crafted by artisans, featuring temple motifs and antique gold finish. Perfect for bridal wear and festive sarees.",
-      gallery: ["/assets/j6.jpg", "/assets/j8.jpg", "/assets/j4.jpg"],
+        "Handcrafted by skilled artisans with antique polish. Perfect with silk sarees.",
+      gallery: [
+        "/assets/j16.jpg",
+        "/assets/j18.avif",
+        "/assets/j19.webp",
+        "/assets/j20.jpeg",
+        "/assets/j40.jpeg",
+        "/assets/j42.jpeg",
+      ],
     },
     {
       id: 7,
-      img: "/assets/j7.jpg",
+      img: "/assets/j45.jpeg",
+      title: "Kundan Bridal Necklace",
+      tag: "NEW",
+      category: "necklace",
+      description:
+        "Traditional Kundan necklace set with uncut stones, loved by brides across India.",
+      details:
+        "Made using uncut Kundan stones, symbolizing royalty and grandeur in Indian weddings.",
+      gallery: [
+        "/assets/j16.jpg",
+        "/assets/j18.avif",
+        "/assets/j19.webp",
+        "/assets/j20.jpeg",
+        "/assets/j40.jpeg",
+        "/assets/j42.jpeg",
+      ],
+    },
+
+    // ===== Bangles =====
+    {
+      id: 8,
+      img: "/assets/j21.jpg",
+      title: "Gold Plated Bangles",
+      tag: "SALE",
+      category: "bangles",
+      description:
+        "Elegant gold plated bangles designed with floral motifs, perfect for festivals.",
+      details:
+        "A set of 4 bangles made with premium gold plating, suitable for everyday and festive wear.",
+      gallery: ["/assets/j17.jpg", "/assets/j39.jpeg", "/assets/j41.jpeg"],
+    },
+
+    // ===== Jewellery Sets =====
+    {
+      id: 9,
+      img: "/assets/j46.webp",
+      title: "Bridal Jewellery Set",
+      tag: "NEW",
+      category: "jewellery sets",
+      description:
+        "Complete bridal jewellery set including necklace, earrings, maang tikka and bangles.",
+      details:
+        "Crafted for Indian brides with premium stones, traditional patterns and durability.",
+      gallery: [
+        "/assets/j47.jpg",
+        "/assets/j48.webp",
+        "/assets/j49.jpg",
+        "/assets/j50.jpg",
+        "/assets/j51.webp",
+      ],
+    },
+
+    // ===== Mangalsutras =====
+    {
+      id: 10,
+      img: "/assets/j15.jpg",
+      title: "Gold Mangalsutra",
+      tag: "NEW",
+      category: "mangalsutras",
+      description:
+        "Classic gold mangalsutra with black beads and pendant design, symbol of marriage.",
+      details:
+        "Crafted in 22k gold, designed to suit both modern and traditional styles.",
+      gallery: ["/assets/j15.jpg", "/assets/j16.jpg", "/assets/j17.jpg"],
+    },
+
+    // ===== Chain =====
+    {
+      id: 11,
+      img: "/assets/j2.jpg",
+      title: "Simple Gold Chain",
+      tag: "SALE",
+      category: "chain",
+      description:
+        "Lightweight gold chain, suitable for daily wear and gifting.",
+      details: "Crafted in pure gold, durable and elegant for men and women.",
+      gallery: [
+        "/assets/j12.jpg",
+        "/assets/j29.jpeg",
+        "/assets/j30.jpeg",
+        "/assets/j31.jpeg",
+        "/assets/j32.jpeg",
+        "/assets/j33.jpeg",
+        "/assets/j35.jpeg",
+      ],
+    },
+
+    // ===== Silver Items =====
+    {
+      id: 12,
+      img: "/assets/s1.jpg",
       title: "Lakshmi Silver Pendant",
       tag: "SALE",
-      category: "Silver",
+      category: "silver items",
       description:
         "Sacred silver pendant engraved with Goddess Lakshmi, believed to bring prosperity and blessings.",
       details:
-        "This pendant is crafted in pure silver with embossed Lakshmi design. A divine piece to keep close, ideal for gifting on auspicious occasions.",
-      gallery: ["/assets/j7.jpg", "/assets/j8.jpg", "/assets/j5.jpg"],
+        "Made with pure silver, often used in daily wear or festive gifting.",
+      gallery: [
+        "/assets/s2.jpg",
+        "/assets/s3.webp",
+        "/assets/s4.webp",
+        "/assets/s5.avif",
+        "/assets/s6.jpg",
+        "/assets/s7.jpg",
+        "/assets/s8.webp",
+        "/assets/s9.webp",
+        "/assets/s10.webp",
+        "/assets/s11.jpg",
+      ],
     },
     {
-      id: 8,
-      img: "/assets/j8.jpg",
+      id: 13,
+      img: "/assets/c1.jpg",
       title: "Gold Coin Pendant",
       tag: "SALE",
-      category: "Silver",
+      category: "silver items",
       description:
-        "Traditional gold coin pendant with Lakshmi design, perfect for festive occasions and gifting.",
+        "Traditional coin pendant with Lakshmi design, widely used for gifting.",
       details:
-        "Gold-plated pendant featuring embossed Lakshmi. A classic jewellery piece widely used in Indian households for gifting and auspicious wear.",
-      gallery: ["/assets/j8.jpg", "/assets/j7.jpg", "/assets/j6.jpg"],
+        "Gold plated silver coin pendant, perfect for auspicious functions and Diwali gifts.",
+      gallery: [
+        "/assets/c2.webp",
+        "/assets/c3.webp",
+        "/assets/c4.webp",
+        "/assets/c5.jpg",
+        "/assets/c6.jpg",
+        "/assets/c7.jpg",
+        "/assets/c8.jpg",
+      ],
     },
   ];
 
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
   const [filter, setFilter] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(8);
 
-  const handleCardClick = (product) => {
+  // Build a flat image list depending on filter
+  const getDisplayItems = () => {
+    if (filter === "all") {
+      return productData.flatMap((product) =>
+        product.gallery.map((img) => ({ ...product, img }))
+      );
+    } else {
+      return productData
+        .filter((p) => p.category === filter)
+        .flatMap((product) =>
+          product.gallery.map((img) => ({ ...product, img }))
+        );
+    }
+  };
+
+  const allItems = getDisplayItems();
+  const displayItems = allItems.slice(0, visibleCount);
+
+  const handleCardClick = (product, img) => {
     setSelectedProduct(product);
-    setActiveImage(product.img);
+    setActiveImage(img);
   };
 
   const handleClose = () => {
@@ -123,12 +325,17 @@ function Products() {
     setActiveImage(null);
   };
 
-  const categories = [...new Set(productData.map((p) => p.category))];
-
-  const filteredProducts =
-    filter === "all"
-      ? productData
-      : productData.filter((item) => item.category === filter);
+  const categories = [
+    "all",
+    "bracelet",
+    "ring",
+    "necklace",
+    "bangles",
+    "jewellery sets",
+    "mangalsutras",
+    "chain",
+    "silver items",
+  ];
 
   return (
     <section className="products-section">
@@ -144,19 +351,15 @@ function Products() {
 
         {/* Filter Buttons */}
         <div className="filter-buttons text-center mb-5">
-          <Button
-            variant={filter === "all" ? "warning" : "outline-light"}
-            className="me-2"
-            onClick={() => setFilter("all")}
-          >
-            All
-          </Button>
           {categories.map((cat) => (
             <Button
               key={cat}
               variant={filter === cat ? "warning" : "outline-light"}
               className="me-2 text-capitalize"
-              onClick={() => setFilter(cat)}
+              onClick={() => {
+                setFilter(cat);
+                setVisibleCount(8); // reset when switching filter
+              }}
             >
               {cat}
             </Button>
@@ -165,11 +368,12 @@ function Products() {
 
         {/* Products Grid */}
         <Row>
-          {filteredProducts.map((item, index) => (
-            <Col md={3} sm={6} xs={12} key={item.id} className="mb-4">
+          {displayItems.map((item, index) => (
+            <Col md={3} sm={6} xs={12} key={index} className="mb-4">
               <div
                 className="product-card"
                 style={{ animationDelay: `${index * 0.2}s` }}
+                onClick={() => handleCardClick(item, item.img)}
               >
                 {item.tag && (
                   <span className={`product-badge ${item.tag.toLowerCase()}`}>
@@ -182,19 +386,22 @@ function Products() {
                   className="product-img"
                 />
                 <h6 className="product-title">{item.title}</h6>
-
-                {/* View Product Button */}
-                <Button
-                  variant="warning"
-                  className="view-btn"
-                  onClick={() => handleCardClick(item)}
-                >
-                  View Product
-                </Button>
               </div>
             </Col>
           ))}
         </Row>
+
+        {/* Load More Button */}
+        {visibleCount < allItems.length && (
+          <div className="text-center mt-4">
+            <Button
+              variant="outline-warning"
+              onClick={() => setVisibleCount((prev) => prev + 8)}
+            >
+              Load More
+            </Button>
+          </div>
+        )}
 
         {/* Modal */}
         <Modal
@@ -229,33 +436,27 @@ function Products() {
 
                 <div className="social-icons mt-4">
                   <a
-                    href="https://wa.me/919876543210"
+                    href="https://wa.me/919284935310"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FaWhatsapp />
                   </a>
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/share/1EaEm8k6sh/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FaFacebook />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/nileshpanu?igsh=dW9iOGpvcWE4Y3lo"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FaInstagram />
                   </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaTwitter />
-                  </a>
+                 
                 </div>
               </Col>
             </Row>
@@ -276,29 +477,6 @@ function Products() {
                   />
                 ))}
               </div>
-            </div>
-
-            {/* Related Products */}
-            <div className="related-products mt-4">
-              <h6>More from this category</h6>
-              <Row>
-                {productData
-                  .filter(
-                    (p) =>
-                      p.category === selectedProduct?.category &&
-                      p.id !== selectedProduct.id
-                  )
-                  .map((item) => (
-                    <Col xs={4} key={item.id}>
-                      <img
-                        src={process.env.PUBLIC_URL + item.img}
-                        alt={item.title}
-                        className="related-img"
-                        onClick={() => handleCardClick(item)}
-                      />
-                    </Col>
-                  ))}
-              </Row>
             </div>
           </Modal.Body>
         </Modal>

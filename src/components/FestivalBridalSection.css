@@ -1,0 +1,105 @@
+.festival-bridal-section {
+  background: linear-gradient(135deg, #3a2520, #2e1c19);
+  color: #fff;
+  padding: 5rem 2rem;
+  border-top: 2px solid #ffd27f;
+}
+
+.festival-bridal-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.festival-bridal-section .highlight {
+  color: #ffd27f;
+  text-shadow: 0 0 8px rgba(255, 215, 127, 0.6);
+}
+
+.festival-bridal-section p {
+  font-family: "Poppins", sans-serif;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cta-buttons .talk-btn {
+  background: linear-gradient(90deg, #ff9800, #d17b00);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.cta-buttons .talk-btn:hover {
+  background: linear-gradient(90deg, #ffd27f, #ff9800);
+  color: #2e1c19;
+  box-shadow: 0 0 20px rgba(255, 215, 127, 0.5);
+}
+
+.cta-buttons .whatsapp-btn {
+  background: #25d366;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.cta-buttons .whatsapp-btn:hover {
+  background: #1ebc57;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+}
+
+/* Image Gallery */
+.image-gallery .main-img img {
+  border-radius: 12px;
+  border: 2px solid #ffd27f;
+  box-shadow: 0 0 20px rgba(255, 215, 127, 0.4);
+}
+
+.small-images img {
+  width: 48%;
+  border-radius: 10px;
+  border: 2px solid #ffd27f;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.small-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 127, 0.5);
+}
+
+@media (max-width: 768px) {
+  .image-gallery .small-images {
+    flex-direction: column;
+  }
+  .small-images img {
+    width: 100%;
+  }
+}
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* spacing between buttons */
+  margin-top: 1.5rem;
+}
+
+.cta-buttons .talk-btn,
+.cta-buttons .whatsapp-btn {
+  flex: 1; /* makes buttons equal width */
+  text-align: center;
+}
+
+/* On small screens stack vertically */
+@media (max-width: 576px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cta-buttons .talk-btn,
+  .cta-buttons .whatsapp-btn {
+    width: 100%;
+  }
+}

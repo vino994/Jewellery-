@@ -1,97 +1,119 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Button, Modal } from "react-bootstrap";
+import { Container, Row, Col, Button, Modal, Carousel } from "react-bootstrap";
 import "./PromoSection.css";
 
 function PromoSection() {
-  // ====== Promo Offers Data ======
-  const offers = [
+  // ====== Product Data ======
+  const productData = [
+    // ===== Bracelet =====
     {
       id: 1,
-      img: "/assets/j22.jpg",
-      discount: "15% Off",
-      title: "Gold Bangles Collection",
+      img: "/assets/bracelet6.jpg",
+      title: "Kada Bracelet",
+      tag: "NEW",
+      category: "bracelet",
+      description:
+        "Traditional kada-style bracelet crafted with intricate Indian motifs, perfect for festive and wedding wear.",
+      details:
+        "Made with high-quality silver and antique finish. Ideal for weddings and festive occasions.",
+      gallery: [
+        "/assets/silver5.webp",
+        "/assets/silver6.jpeg",
+        "/assets/silver4.jpeg",
+        "/assets/silver1.jpeg",
+        "/assets/silver2.webp",
+        "/assets/silver3.webp",
+        "/assets/bracelet.webp",
+        "/assets/bracelet4.avif",
+        "/assets/bracelet5.webp",
+        "/assets/bracelet1.webp",
+        "/assets/bracelet3.webp",
+      ],
     },
     {
       id: 2,
-      img: "/assets/j20.jpeg",
-      discount: "25% Off",
-      title: "Temple Jewellery Collection",
+      img: "/assets/silver5.webp",
+      title: "Silver Kada",
+      tag: "NEW",
+      category: "bracelet",
+      description:
+        "Classic silver kada bracelet with a sleek finish, ideal for daily wear or gifting.",
+      details:
+        "Crafted with 92.5 silver, lightweight yet durable for daily use or as a thoughtful gift.",
+      gallery: [
+        "/assets/silver5.webp",
+        "/assets/silver6.jpeg",
+        "/assets/silver4.jpeg",
+        "/assets/silver1.jpeg",
+        "/assets/silver2.webp",
+        "/assets/silver3.webp",
+        "/assets/bracelet.webp",
+        "/assets/bracelet4.avif",
+        "/assets/bracelet5.webp",
+        "/assets/bracelet1.webp",
+        "/assets/bracelet3.webp",
+      ],
     },
-  ];
-
-  // ====== Features Data ======
-  const features = [
-    {
-      id: 1,
-      icon: "bi bi-truck",
-      title: "FREE DELIVERY",
-      desc: "Safe and secure delivery for all jewellery orders.",
-    },
-    {
-      id: 2,
-      icon: "bi bi-gift",
-      title: "FESTIVE OFFERS",
-      desc: "Exciting discounts during weddings and festive seasons.",
-    },
+    // ===== Rings =====
     {
       id: 3,
-      icon: "bi bi-shield-check",
-      title: "PURITY GUARANTEED",
-      desc: "Certified gold & silver with assured quality.",
+      img: "/assets/j1.jpg",
+      title: "Silver Temple Ring",
+      tag: "SALE",
+      category: "ring",
+      description:
+        "Handcrafted silver ring inspired by temple architecture, bringing timeless heritage into daily wear.",
+      details:
+        "Made in 92.5 sterling silver with divine carvings inspired by South Indian temples.",
+      gallery: [
+        "/assets/j4.jpg",
+        "/assets/j2.jpg",
+        "/assets/j3.jpg",
+        "/assets/j5.jpg",
+        "/assets/j6.jpg",
+        "/assets/j7.jpg",
+        "/assets/j9.jpg",
+        "/assets/j10.jpg",
+        "/assets/j11.jpg",
+      ],
     },
+    // ... (rest of your products here, unchanged)
   ];
 
-  // ====== Collection Images ======
-  const collectionImages = [
-    "/assets/j1.jpg",
-    "/assets/j2.jpg",
-    "/assets/j3.jpg",
-    "/assets/j4.jpg",
-    "/assets/j5.jpg",
-    "/assets/j6.jpg",
-    "/assets/j7.jpg",
-    "/assets/j8.jpg",
-  ];
+  // ====== Slideshow Images (pick first 5 featured) ======
+  const slideshowImages = productData.slice(0, 5).map((p) => p.img);
+
+  // ====== Collect All Images from product galleries ======
+  const allCollectionImages = productData.flatMap((p) => p.gallery);
 
   // ====== Modal State ======
   const [showModal, setShowModal] = useState(false);
 
+  // ====== Pagination ======
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+
+  const totalPages = Math.ceil(allCollectionImages.length / itemsPerPage);
+  const currentImages = allCollectionImages.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePrev = () => setCurrentPage((p) => Math.max(p - 1, 1));
+  const handleNext = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
+
   return (
     <section className="promo-section">
       <Container>
-        {/* ====== Top Promo Offers ====== */}
-        <Row className="mb-5">
-          {offers.map((offer) => (
-            <Col key={offer.id} md={6} sm={12} className="promo-banner">
-              <img src={offer.img} alt={offer.title} />
-              <div className="promo-text">
-                <h4>{offer.discount}</h4>
-                <p>{offer.title}</p>
-              </div>
-            </Col>
-          ))}
-        </Row>
-
-        {/* ====== Features Row ====== */}
-        <Row className="text-center mb-5 features-row">
-          {features.map((feature) => (
-            <Col key={feature.id} md={4}>
-              <i className={feature.icon}></i>
-              <h6>{feature.title}</h6>
-              <p>{feature.desc}</p>
-            </Col>
-          ))}
-        </Row>
-
-        {/* ====== Diamond Collection Section ====== */}
-        <Row className="diamond-section align-items-center">
+        {/* ====== Collection Intro ====== */}
+        <Row className="diamond-section align-items-center mb-5">
           <Col md={6}>
             <h2>
               Discover our{" "}
-              <span className="highlight">Exquisite Bangle Collection</span>
+              <span className="highlight">Exquisite Jewellery Collections</span>
             </h2>
             <p>
-              Handcrafted diamond necklaces, rings and bangles with unmatched
+              Handcrafted bangles, necklaces, rings and pendants with unmatched
               brilliance and purity. Perfect for weddings, engagements and
               timeless celebrations.
             </p>
@@ -100,19 +122,25 @@ function PromoSection() {
               craftsmanship, designed to make every occasion unforgettable.
             </p>
 
-            {/* Phone Call Button */}
-            <Button className="talk-btn" href="tel:+919876543210">
+            <Button className="talk-btn" href="tel:+919284935310">
               Let’s Talk
             </Button>
           </Col>
-          <Col md={6} className="text-center">
-            <img
-              src="/assets/j21.jpg"
-              alt="Diamond Necklace"
-              className="diamond-img"
-            />
 
-            {/* Open Modal Button */}
+          {/* ====== Slideshow Section ====== */}
+          <Col md={6} className="text-center mt-5">
+            <Carousel fade interval={3000}>
+              {slideshowImages.map((img, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    src={process.env.PUBLIC_URL + img}
+                    alt={`Slide ${index}`}
+                    className="d-block w-100 diamond-carousel-img"
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
+
             <Button
               variant="outline-warning"
               className="mt-3"
@@ -124,7 +152,7 @@ function PromoSection() {
         </Row>
       </Container>
 
-      {/* ====== Modal for Collections ====== */}
+      {/* ====== Modal for Collections with Pagination ====== */}
       <Modal
         show={showModal}
         onHide={() => setShowModal(false)}
@@ -137,7 +165,7 @@ function PromoSection() {
         </Modal.Header>
         <Modal.Body>
           <Row>
-            {collectionImages.map((img, index) => (
+            {currentImages.map((img, index) => (
               <Col key={index} md={4} sm={6} xs={12} className="mb-3">
                 <img
                   src={process.env.PUBLIC_URL + img}
@@ -147,6 +175,29 @@ function PromoSection() {
               </Col>
             ))}
           </Row>
+
+          {/* Pagination Controls */}
+          <div className="pagination-controls text-center mt-3">
+            <Button
+              variant="outline-light"
+              className="me-2"
+              disabled={currentPage === 1}
+              onClick={handlePrev}
+            >
+              Prev
+            </Button>
+            <span className="page-indicator">
+              Page {currentPage} of {totalPages}
+            </span>
+            <Button
+              variant="outline-light"
+              className="ms-2"
+              disabled={currentPage === totalPages}
+              onClick={handleNext}
+            >
+              Next
+            </Button>
+          </div>
         </Modal.Body>
       </Modal>
     </section>

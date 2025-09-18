@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Products from "./components/Products";
 import PromoSection from "./components/PromoSection";
+import FestivalBridalSection from "./components/FestivalBridalSection";
+import NewArrivalSection from "./components/NewArrivalSection";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <CustomNavbar />
       <Hero />
       <Products />
+      <FestivalBridalSection />
       <PromoSection />
+      <NewArrivalSection />
       {/* Future sections here: Lookbook, Blog, Shop, etc. */}
       <Footer />
     </div>
